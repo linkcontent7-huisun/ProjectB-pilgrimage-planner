@@ -1,0 +1,32 @@
+{
+  "plan_name": "대전에서 당진으로, 김대건 신부의 길",
+  "region": "대전·당진",
+  "persona": "mass_centered",
+  "party_size": 2,
+  "budget_per_person": 80000,
+  "estimated_cost_per_person": 73500,
+  "summary": "도심 성당의 고요한 아침과 당진 성지의 순교자 정신을 잇는 1박 2일 순례입니다.",
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-09-20",
+      "weather": { "summary": "맑음", "temp_min": 18, "temp_max": 26, "precipitation_probability": 10 },
+      "places": [
+        { "order": 1, "name": "대흥동 주교좌성당", "type": "holy_site", "start_time": "09:30", "end_time": "11:00", "coordinates": { "lat": 36.3223, "lng": 127.4187 }, "address": "대전 중구 대흥로", "description": "대전교구의 중심 성당에서 순례를 시작합니다.", "mass_time": "10:00", "estimated_cost": 0, "reason": "미사 참례 중심 스타일에 맞는 첫 방문지입니다." },
+        { "order": 2, "name": "성심당 본점", "type": "restaurant", "start_time": "11:15", "end_time": "12:20", "coordinates": { "lat": 36.3276, "lng": 127.4273 }, "description": "대전의 대표 빵집에서 가벼운 점심을 준비합니다.", "estimated_cost": 12000, "travel_from_previous": { "mode": "walk", "duration_min": 12, "distance_km": 0.9 }, "reason": "성당에서 걸어갈 수 있어 동선이 간결합니다." },
+        { "order": 3, "name": "은행동 커피 쉼터", "type": "cafe", "start_time": "12:30", "end_time": "13:20", "coordinates": { "lat": 36.3284, "lng": 127.4261 }, "description": "오후 이동 전 잠시 쉬어가는 카페입니다.", "estimated_cost": 6000, "travel_from_previous": { "mode": "walk", "duration_min": 3, "distance_km": 0.2 } },
+        { "order": 4, "name": "대전역 인근 숙소", "type": "lodging", "start_time": "17:00", "end_time": "09:00", "coordinates": { "lat": 36.3323, "lng": 127.4345 }, "description": "다음 날 당진 이동을 위한 실속형 숙소입니다.", "estimated_cost": 35500, "travel_from_previous": { "mode": "walk", "duration_min": 14, "distance_km": 1.1 }, "reason": "대중교통 환승과 예산을 고려했습니다." }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-09-21",
+      "weather": { "summary": "구름 조금", "temp_min": 17, "temp_max": 24, "precipitation_probability": 20 },
+      "places": [
+        { "order": 1, "name": "솔뫼 성지", "type": "holy_site", "start_time": "10:00", "end_time": "12:00", "coordinates": { "lat": 36.8201, "lng": 126.7861 }, "description": "김대건 안드레아 신부의 탄생지에서 묵상합니다.", "mass_time": "11:00", "estimated_cost": 0, "reason": "김대건 신부의 생애를 만나는 핵심 성지입니다." },
+        { "order": 2, "name": "합덕 성당", "type": "mass", "start_time": "12:20", "end_time": "13:00", "coordinates": { "lat": 36.7925, "lng": 126.7859 }, "description": "당진의 오래된 신앙 공동체를 방문합니다.", "estimated_cost": 0, "travel_from_previous": { "mode": "car", "duration_min": 25, "distance_km": 4.1 }, "reason": "솔뫼 성지와 가까워 미사 중심 일정에 좋습니다." },
+        { "order": 3, "name": "신리 성지", "type": "holy_site", "start_time": "13:20", "end_time": "15:00", "coordinates": { "lat": 36.7626, "lng": 126.7711 }, "description": "내포 지역 순교 신앙의 흔적을 따라 걷습니다.", "estimated_cost": 0, "travel_from_previous": { "mode": "car", "duration_min": 18, "distance_km": 4.0 }, "reason": "당진 남부의 성지 순례를 자연스럽게 마무리합니다." }
+      ]
+    }
+  ]
+}
