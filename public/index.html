@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>순례 길잡이</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header"><div><span class="cross">✦</span> <strong>순례 길잡이</strong><small>나만의 가톨릭 성지 순례</small></div><div id="progressBadge" class="progress idle">일정을 입력해 주세요</div></header>
+  <main>
+    <section class="request-panel" aria-label="일정 입력">
+      <h1>순례 일정 만들기</h1>
+      <form id="planForm">
+        <label>지역<input name="region" value="대전" list="regions" required></label>
+        <datalist id="regions"><option>대전</option><option>당진</option><option>서산</option><option>공주</option><option>홍성</option><option>예산</option><option>아산</option><option>논산</option><option>부여</option><option>청양</option><option>보령</option><option>천안</option><option>금산</option><option>세종</option></datalist>
+        <div class="form-row"><label>출발일<input name="start_date" type="date" required></label><label>박수<input name="nights" type="number" min="0" max="4" value="1" required></label></div>
+        <p id="durationLabel" class="hint">1박 2일</p>
+        <div class="form-row"><label>인원<input name="party_size" type="number" min="1" value="2" required></label><label>1인 예산 (원)<input name="budget_per_person" type="number" min="0" step="10000" value="80000" required></label></div>
+        <label>순례 스타일<select name="persona" id="personaSelect"><option value="mass_centered">미사 참례 중심</option></select></label>
+        <label>추가 요청<textarea name="preferences" placeholder="원하시는 분위기나 꼭 들르고 싶은 곳을 적어 주세요."></textarea></label>
+        <p id="formError" class="form-error" role="alert"></p>
+        <button id="submitButton" class="primary" type="submit">순례 일정 만들기</button>
+      </form>
+      <div class="stepper" aria-label="진행 단계"><span data-stage="collect">후보 수집</span><span data-stage="research">조사</span><span data-stage="compose">일정 작성</span><span data-stage="finalize">이동 계산</span></div>
+    </section>
+    <section class="content-grid">
+      <aside class="timeline-panel" id="timelinePanel"><div class="empty">일정을 만들면 여기에 하루별 순례 동선이 표시됩니다.</div></aside>
+      <section class="map-panel"><div id="map" aria-label="순례 지도"><div class="map-empty">일정을 만들면 지도에 동선이 표시됩니다.</div></div></section>
+    </section>
+    <section id="revisePanel" class="revise-panel hidden"><label>일정 수정 요청<textarea id="reviseInstruction" placeholder="2일차 솔뫼성지 빼고 신리성지 넣어줘"></textarea></label><button id="reviseButton" class="secondary" disabled>수정 요청</button><div class="actions"><button id="jsonButton" type="button">JSON 보기</button><a id="pdfLink" target="_blank" rel="noopener">PDF 다운로드</a></div></section>
+    <section class="log-panel"><div class="panel-title"><h2>의사결정 로그</h2><button id="clearLog" type="button">지우기</button></div><div id="logEntries" class="log-entries" aria-live="polite"></div></section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="jsonModal"><div class="modal-head"><h2>일정 JSON</h2><button id="closeJson" type="button">닫기</button></div><pre id="jsonContent"></pre><button id="copyJson" class="primary" type="button">복사</button></dialog>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
