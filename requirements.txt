@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sse-starlette
+pydantic>=2
+python-dotenv
+httpx
+langgraph
+langchain-core
+langchain-openai
+openai
+jsonschema
+pytest
+pytest-asyncio

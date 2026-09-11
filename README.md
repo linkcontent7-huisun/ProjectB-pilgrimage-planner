@@ -9,15 +9,17 @@
 
 ## 진행 상태
 
-🚧 골격 단계 — 설계 문서·스키마 작성 완료, 구현 시작 전.
+🚧 Task 1 완료 — 스키마 모델·테스트, LangGraph 도구 호출/스트리밍 실험 통과 → `ChatOpenAI` 채택.
+실험 기록: [docs/task1-tool-calling-probe.md](docs/task1-tool-calling-probe.md)
 
 ## 실행
 
 ```bash
-python -m venv .venv && .venv\Scripts\activate     # Windows
+py -3.13 -m venv .venv && .venv\Scripts\activate  # 이 PC의 3.14는 _ctypes 손상 → 3.13 사용
 pip install -r requirements.txt
 copy .env.example .env                              # 키 채우기
-uvicorn main:app --reload
+python -m pytest -q                                 # 스키마 테스트
+uvicorn main:app --reload                           # (Task 3부터)
 ```
 
 ## 구조
@@ -32,4 +34,5 @@ public/            프론트엔드 (지도·타임라인·로그)
 specs/             명세·체크리스트·스키마
 docs/              설계·증빙 문서
 tests/
+scripts/           실험 스크립트 (Task 1 도구 호출·스트리밍 검증)
 ```
