@@ -22,6 +22,17 @@ python -m pytest -q                                 # 스키마 테스트
 uvicorn main:app --reload                           # (Task 3부터)
 ```
 
+## API
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/config` | Public map client ID and persona options |
+| GET | `/api/sites?region=대전` | Initial map candidate sites |
+| POST | `/api/plans` | Start a plan-generation job and return its ID/SSE URL |
+| GET | `/api/plans/{id}/stream` | Stream `status`, `log`, `result`, and `error` SSE events |
+| GET | `/api/plans/{id}` | Read the job status and generated plan |
+| POST | `/api/plans/{id}/revise` | Start a revision of a completed plan |
+
 ## 구조
 
 ```
